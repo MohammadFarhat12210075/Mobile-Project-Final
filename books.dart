@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-// Define a Book model
 class Book {
   final int bookId;
   final double price;
@@ -26,7 +25,6 @@ class Book {
   }
 }
 
-// Fetch books from the server
 Future<List<Book>> getBooks() async {
   final response = await http.get(Uri.parse('http://mohammadfarhat258.atwebpages.com/getBooks.php'));
 
@@ -47,7 +45,6 @@ Future<List<Book>> getBooks() async {
   }
 }
 
-// Widget to display each book in a card
 class BookCard extends StatelessWidget {
   final Book book;
 
